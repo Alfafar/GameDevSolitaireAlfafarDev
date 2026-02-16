@@ -147,7 +147,7 @@ The game includes a job mechanism:
 1. Use hoe to cultivate land
 2. Water the land
 3. Plant seeds (e.g., grass seeds)
-4. Wait for crops to mature (3 days)
+4. Wait for crops to mature (growth duration varies by crop type)
 5. Automatic harvest yields crops
 
 ## Game Design Features
