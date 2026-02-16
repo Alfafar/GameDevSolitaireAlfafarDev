@@ -13,10 +13,11 @@ This is a **Farm Simulation Game** developed with Unity Engine, combining time m
 
 ### 1. Time System
 - **Day-Night Cycle**: The game uses a dual time system with days and hours
-- Each day has 24 hours, starting from hour 18 (meaning 18 hours remaining in the day, equivalent to 6 PM)
-- The `time` variable tracks remaining hours in the day (not clock time)
-- Player actions consume time (e.g., talking to NPCs costs 1 hour)
+- Each day has 24 hours; the `time` variable tracks remaining hours in the day
+- Game starts at `time = 18`, meaning 18 hours remain (current time is 6:00 AM)
+- Player actions consume remaining time (e.g., talking to NPCs costs 1 hour)
 - When remaining time drops to 3 hours or less, night dialogue triggers and advances to the next day
+- The visual clock shows elapsed hours: rotation = `(24 - remaining_time) * 15°`
 - Each day ends with specific daily events and dialogues
 
 ### 2. Farm Management System
@@ -74,7 +75,7 @@ The game includes multiple visitable map locations:
 - **Library** (ID: 1800006)
 - **Mine** (ID: 1800007)
 - **Church** (ID: 1800008)
-- **Beach** (ID: 1800009, accessible during game hours 8-20, inclusive)
+- **Beach** (ID: 1800009, accessible when current time is between 8:00-20:00, i.e., when remaining time is between 16-4 hours)
 
 Each map has unlock conditions, opening hours, and specific scenes.
 
@@ -133,7 +134,7 @@ The game includes a job mechanism:
 1. Show opening dialogue ("Game Start")
 2. Initialize main panel (MainPanel)
 3. Create 9 farm plots
-4. Set initial time to Day 1, Hour 18
+4. Set initial time: Day 1, 18 hours remaining (6:00 AM clock time)
 
 ### Daily Loop
 1. **Morning**: Play "new day begins" sound, show wake-up dialogue
