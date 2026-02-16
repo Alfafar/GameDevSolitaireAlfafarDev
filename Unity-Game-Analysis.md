@@ -30,8 +30,8 @@ The core gameplay revolves around farm land management:
 - **Hoeing**: Use hoe to cultivate uncultivated land
 - **Watering**: Water empty land to make it wet
 - **Planting**: Plant seeds (e.g., grass seeds) on wet or empty land
-- **Growth Cycle**: Crops have a growth process counter that decreases each day
-- **Harvesting**: Automatic harvest when process reaches zero
+- **Growth Cycle**: Crops have a growth process counter that decreases each day (each day-end cycle reduces the counter)
+- **Harvesting**: Automatic harvest when the process counter reaches zero
 
 Players start with 9 plots of land to manage.
 
@@ -73,7 +73,7 @@ The game includes multiple visitable map locations:
 - **Library** (ID: 1800006)
 - **Mine** (ID: 1800007)
 - **Church** (ID: 1800008)
-- **Beach** (ID: 1800009, opens at specific hours: 8-20)
+- **Beach** (ID: 1800009, opens at specific hours: hours 8-20 of the 24-hour game time)
 
 Each map has unlock conditions, opening hours, and specific scenes.
 
@@ -147,8 +147,8 @@ The game includes a job mechanism:
 1. Use hoe to cultivate land
 2. Water the land
 3. Plant seeds (e.g., grass seeds)
-4. Wait for crops to mature (growth duration varies by crop type)
-5. Automatic harvest yields crops
+4. Wait for crops to mature (the growth counter decreases by 1 at each day-end cycle)
+5. Automatic harvest yields crops when the growth counter reaches zero
 
 ## Game Design Features
 
