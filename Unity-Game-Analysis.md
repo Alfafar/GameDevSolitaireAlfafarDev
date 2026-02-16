@@ -78,7 +78,7 @@ The game includes multiple visitable map locations:
 - **Library** (ID: 1800006)
 - **Mine** (ID: 1800007)
 - **Church** (ID: 1800008)
-- **Beach** (ID: 1800009, accessible when clock time is 8:00-20:00, which corresponds to remaining time from 16 hours down to 4 hours)
+- **Beach** (ID: 1800009, accessible when clock time is 8:00-20:00, which corresponds to remaining time between 4 and 16 hours)
 
 Each map has unlock conditions, opening hours, and specific scenes.
 
@@ -146,7 +146,7 @@ The game includes a job mechanism:
    - Talk to NPCs (costs time)
    - Perform farm operations (plowing, watering, planting)
    - Execute work tasks
-3. **Night**: When time drops below 3 hours, triggers night dialogue and advances to next day
+3. **Night**: When remaining time drops to 3 hours or less (clock time ≥ 21:00), triggers night dialogue and advances to next day
 
 ### Farm Operation Flow
 1. Use hoe to cultivate land
