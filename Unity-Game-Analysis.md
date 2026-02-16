@@ -14,9 +14,12 @@ This is a **Farm Simulation Game** developed with Unity Engine, combining time m
 ### 1. Time System
 - **Day-Night Cycle**: The game uses a dual time system with days and hours
 - Each day has 24 hours; the `time` variable tracks remaining hours in the day
-- Game starts at `time = 18`, meaning 18 hours remain (current time is 6:00 AM)
+- **Clock time formula**: `Clock Time (hours) = 24 - Remaining Time`
+  - Example: `time = 18` (remaining) → Clock time = 6:00 AM
+  - Example: `time = 4` (remaining) → Clock time = 20:00 (8:00 PM)
+- Game starts at `time = 18`, meaning 18 hours remain (clock time is 6:00 AM)
 - Player actions consume remaining time (e.g., talking to NPCs costs 1 hour)
-- When remaining time drops to 3 hours or less, night dialogue triggers and advances to the next day
+- When remaining time drops to 3 hours or less (clock time ≥ 21:00), night dialogue triggers and advances to the next day
 - The visual clock shows elapsed hours: rotation = `(24 - remaining_time) * 15°`
 - Each day ends with specific daily events and dialogues
 
