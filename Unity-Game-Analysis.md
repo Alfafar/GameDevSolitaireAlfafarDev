@@ -78,7 +78,7 @@ The game includes multiple visitable map locations:
 - **Library** (ID: 1800006)
 - **Mine** (ID: 1800007)
 - **Church** (ID: 1800008)
-- **Beach** (ID: 1800009, accessible when remaining time is 4-16 hours, corresponding to clock time 8:00-20:00)
+- **Beach** (ID: 1800009, accessible when clock time is 8:00-20:00, which corresponds to remaining time from 16 hours down to 4 hours)
 
 Each map has unlock conditions, opening hours, and specific scenes.
 
