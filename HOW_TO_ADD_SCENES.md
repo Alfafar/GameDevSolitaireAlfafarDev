@@ -46,9 +46,9 @@ cid,name,unlockday,opentime,scene,prefab,icon,campath,ptrans,pani,ctrl
 | **ID (cid)** | Unique map identifier, recommend 180xxxx format | `1800010` |
 | **Name (name)** | Display name of the map | `Shop`, `Forest`, `Castle` |
 | **Unlock Day (unlockday)** | Day when map becomes available | `1` (Day 1), `3` (Day 3) |
-| **Open Time (opentime)** | Hours when map is accessible, separated by \| | `1\|2\|3\|4\|5\|6\|7\|8\|9\|10\|11\|12\|13\|14\|15\|16\|17\|18\|19\|20\|21\|22\|23\|24` (All day)<br>`8\|9\|10\|11\|12\|13\|14\|15\|16\|17\|18\|19\|20` (8AM to 8PM) |
+| **Open Time (opentime)** | Hours when map is accessible, separated by pipe | `1` pipe `2` pipe `3`...`24` (All day)<br>`8` pipe `9`...`20` (8AM to 8PM) |
 | **Scene Name (scene)** | Unity scene file name (without .unity extension) | `Shop`, `Game`, `Forest` |
-| **Prefab (prefab)** | UI prefab path (relative to Resources), separated by \| for different game days | `StorePanel\|StorePanel` (2 same prefabs)<br>`DayPanel\|NightPanel` (Different prefabs per day) |
+| **Prefab (prefab)** | UI prefab path (relative to Resources), separated by pipe for different game days | `StorePanel` pipe `StorePanel` (2 same prefabs)<br>`DayPanel` pipe `NightPanel` (Different prefabs per day) |
 | **Icon (icon)** | Map icon path | `UI/地图_会见室` |
 | **Camera Path (campath)** | Path to camera object in scene | `Base/Camera_A-Block_01` |
 | **Default Position (ptrans)** | Player spawn point marker name | `Point`, `StartPoint` |
