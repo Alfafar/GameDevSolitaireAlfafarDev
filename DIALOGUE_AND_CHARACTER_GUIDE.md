@@ -121,9 +121,12 @@ After creating the character, add dialogue content (see "Adding New Dialogue" se
 
 **Naming Convention**:
 - Character dialogue: `{CharacterName}{CharacterID}/{CharacterID}_{SceneName}_{Day}`
-  - Example: `少女1200001/1200001_Shop_1`
-- Daily story: `第{X}日{TimeOfDay}`
+  - The format directly concatenates character name with ID (no separator)
+  - Example: `少女1200001/1200001_Shop_1` (少女 is character name, 1200001 is ID)
+  - For English: `Blacksmith1200004/1200004_Shop_1`
+- Daily story: `第{X}日{TimeOfDay}` (Chinese format)
   - Example: `第4日起床`, `第5日晚上`
+  - Or use English: `Day4Morning`, `Day5Night`
 
 #### Step 2: Edit Dialogue Using XNode Editor
 
@@ -156,7 +159,12 @@ Each DialogNode contains the following configurable fields:
     - **choiceText**: Text displayed for the choice
     - **conditions**: List of conditions for displaying the choice
       - **id**: Attribute ID
-      - **comparisonType**: Comparison type (>, <, ==, >=, <=)
+      - **comparisonType**: Comparison type enum value
+        - `GreaterThan` (>)
+        - `LessThan` (<)
+        - `EqualTo` (==)
+        - `GreaterOrEqual` (>=)
+        - `LessOrEqual` (<=)
       - **value**: Target value
 
 ##### Scene Control
@@ -240,9 +248,10 @@ Dialogue can give rewards or consume resources from the player.
 
 **Configuration Method**:
 1. Add reward items to DialogNode's `rewards` field
-   - k: Asset ID (refer to asset.csv)
-   - v: Quantity
-2. Add cost items to DialogNode's `cost` field
+   - This is a list of `Pair<int, int>` where:
+     - First value (k): Asset ID (refer to asset.csv)
+     - Second value (v): Quantity
+2. Add cost items to DialogNode's `cost` field (same format)
 
 **Effects**:
 - Automatically processes rewards/costs when dialogue is displayed
@@ -360,8 +369,9 @@ endingDescription: "You purchased a new sword"
    - Asset ID: Refer to asset.csv
 
 2. **File Naming**:
-   - Use Chinese names for dialogue asset files
-   - Character dialogues must follow naming format to be recognized by system
+   - Dialogue asset files can use Chinese or English names
+   - For character dialogues: Must follow the naming format `{CharacterName}{CharacterID}/{CharacterID}_{SceneName}_{Day}` to be recognized by system
+   - The system looks up files by this exact path in Resources/Dialog folder
 
 3. **Dialogue Flow**:
    - Ensure dialogue graph has clear ending node
