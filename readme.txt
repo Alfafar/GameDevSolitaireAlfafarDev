@@ -41,3 +41,23 @@
 之后进行线上颁奖活动，人气最高的开发者会获得Kenner老师提供的100块红包。
 （后续是否有更多的奖品，我们可以一起期待一下）
 
+——————————————————————
+【开发文档】
+为了帮助开发者快速上手项目，我们提供了详细的开发指南：
+
+📖 添加对话和人物指南.md - 中文版开发指南
+   详细说明如何在游戏中添加新的对话系统和人物角色
+
+📖 DIALOGUE_AND_CHARACTER_GUIDE.md - English Development Guide
+   Detailed instructions on adding dialogue systems and characters to the game
+
+指南包含：
+- 项目结构说明
+- 分步骤操作指导
+- 代码示例
+- 命名规范
+- 常见问题解答
+- 快速参考表
+
+建议所有参与开发的同学先阅读相关文档，能大大提高开发效率！
+
