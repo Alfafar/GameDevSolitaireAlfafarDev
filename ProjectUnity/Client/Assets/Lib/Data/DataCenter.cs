@@ -35,7 +35,7 @@ public static class DataCenter
            
         }
     }
-    public static string[] ResAry = new string[] { "Achievement" , "Enemy", "Hero", "MonterBo", "Skill", "Talent" };
+    public static string[] ResAry = new string[] { "Achievement" , "Enemy", "Hero", "MonterBo", "Skill", "Talent", "map" };
     public static void InitWWW()
     {
         data = new Map<string, Map<int, DataRow>>();
